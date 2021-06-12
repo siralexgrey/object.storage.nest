@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  nest_mongo_backend:
+    container_name: nest_mongo_backend
+    image: andreytimchenko/object-storage:0.0.1
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    environment:
+      - EXTERNAL_PORT=3000
+      - MONGO_ATLAS_USER=sirAlexGrey
+      - MONGO_ATLAS_PASSWORD=161360238Gbplf
+      - MONGO_ATLAS_DB=object-storage
